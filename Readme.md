@@ -9,3 +9,7 @@ Undefined symbols for architecture i386:
 ld: symbol(s) not found for architecture i386
 clang: error: linker command failed with exit code 1 (use -v to see invocation)
 rake aborted!
+
+
+Note: the pod is an dylib, so ?needs to be added in embedded_frameworks.
+But this will need to be commented out until after running rake pod:install, so the path to the framework exists.

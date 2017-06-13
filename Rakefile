@@ -27,7 +27,7 @@ Motion::Project::App.setup do |app|
   app.embedded_frameworks += ["vendor/GoogleCast.framework"] if File.exist?("vendor/GoogleCast.framework")
 
   app.pods :bridgesupport_cflags => "-include ./Headers/Public/google-cast-sdk/GoogleCast/GCKDefines.h" do
-    pod 'google-cast-sdk', '~> 3.3.0'
+    pod 'google-cast-sdk', '~> 3.5.0'
   end
 
   app.libs += [
@@ -42,7 +42,7 @@ task :install_pods do
   Rake::Task["pod:install"].invoke
   # Copy the framework we're going to import to the vendor directory
   rm_r 'vendor/GoogleCast.framework'
-  cp_r 'vendor/Pods/google-cast-sdk/GoogleCastSDK-Public-3.3.0-Release/GoogleCast.framework', 'vendor'
+  cp_r 'vendor/Pods/google-cast-sdk/GoogleCastSDK-Public-3.5.0-Release/GoogleCast.framework', 'vendor'
   # Including the framework in the `embedded frameworks` array will make RM try to generate
   # bridgesupport files for its headers again. Since we already did that via motion-cocoapods,
   # we delete all headers except one (the toolchain needs at least one header).

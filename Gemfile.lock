@@ -15,6 +15,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    bubble-wrap (1.9.6)
     claide (1.0.1)
     cocoapods (1.1.1)
       activesupport (>= 4.0.2, < 5)
@@ -60,7 +61,7 @@ GEM
     nanaimo (0.2.3)
     nap (1.1.0)
     netrc (0.7.8)
-    sugarcube (3.3.7)
+    sugarcube (3.4.0)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -75,8 +76,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bubble-wrap (~> 1.9.6)
   motion-cocoapods!
-  sugarcube (~> 3.3.7)
+  sugarcube (~> 3.4.0)
 
 BUNDLED WITH
-   1.12.5
+   1.15.1

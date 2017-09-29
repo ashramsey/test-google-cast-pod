@@ -1,5 +1,16 @@
 class AppDelegate
   def application(application, didFinishLaunchingWithOptions:launchOptions)
+
+    p 3
+    # chromecast setup
+    id = "85A5FFD6" # Production ID
+    options = GCKCastOptions.alloc.initWithReceiverApplicationID(id)
+    GCKCastContext.setSharedInstanceWithOptions(options)
+    GCKLogger.sharedInstance.setDelegate self
+
+
+    p 2
+
     rootViewController = UIViewController.alloc.init
     rootViewController.title = 'test-google-cast-pod'
     rootViewController.view.backgroundColor = UIColor.whiteColor
@@ -10,14 +21,7 @@ class AppDelegate
     @window.rootViewController = navigationController
     @window.makeKeyAndVisible
 
-    p 3
-    # chromecast setup
-    options = GCKCastOptions.alloc.initWithReceiverApplicationID("6522CABE")
-    GCKCastContext.setSharedInstanceWithOptions(options)
-    GCKLogger.sharedInstance.setDelegate self
 
-
-    p 2
 
     true
   end
